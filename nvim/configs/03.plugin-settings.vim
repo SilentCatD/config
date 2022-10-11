@@ -44,7 +44,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " NERDTree configs"
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-autocmd VimEnter * NERDTree | wincmd p
+" open NERDTree on start up
+" autocmd VimEnter * NERDTree | wincmd p
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
