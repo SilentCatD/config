@@ -78,10 +78,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	git
 	sudo
 	command-not-found
-	git
-	zsh-autosuggestions
+	zsh-autosuggestions	
 	zsh-syntax-highlighting
 )
 
@@ -113,14 +113,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-export PATH="$PATH:$HOME/fvm/default/bin"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH=$PATH:"/home/silent_cat/fvm/default/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias cat=batcat
 
-alias cat='batcat' 
-
-source /home/silent-cat/.config/broot/launcher/bash/br
-alias ls="logo-ls"
+alias ls='logo-ls'
+alias la='logo-ls -A'
+alias ll='logo-ls -al'
